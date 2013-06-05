@@ -1,0 +1,25 @@
+record(ai, "$(P)simple:value1")
+{
+    field(VAL, 1)
+    field(HIHI,18)
+    field(HIGH,15)
+    field(LOW,5)
+    field(LOLO,2)
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LSV,"MINOR")
+    field(LLSV,"MAJOR")
+}
+
+record(ai, "$(P)simple:value2")
+{
+    field(VAL, 2)
+}
+
+record(calc,"$(P)simple:diff")
+{
+    field(SCAN,"1 second")
+    field(INPA, "simple:value1")
+    field(INPB, "simple:value2")
+    field("CALC", "A - B")
+}
