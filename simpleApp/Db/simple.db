@@ -1,4 +1,4 @@
-record(ai, "$(P)simple:value1")
+record(ai, "$(P):VALUE1")
 {
     field(VAL, 1)
     field(HIHI,18)
@@ -11,15 +11,15 @@ record(ai, "$(P)simple:value1")
     field(LLSV,"MAJOR")
 }
 
-record(ai, "$(P)simple:value2")
+record(ai, "$(P):VALUE2")
 {
     field(VAL, 2)
 }
 
-record(calc,"$(P)simple:diff")
+record(calc,"$(P):DIFF")
 {
     field(SCAN,"1 second")
-    field(INPA, "simple:value1")
-    field(INPB, "simple:value2")
+    field(INPA, "$(P):VALUE1")
+    field(INPB, "$(P):VALUE2")
     field("CALC", "A - B")
 }

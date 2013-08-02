@@ -5,6 +5,9 @@
 
 < envPaths
 
+epicsEnvSet "IOCNAME" "$(P=$(MYPVPREFIX))SIMPLE"
+epicsEnvSet "IOCSTATS_DB" "$(DEVIOCSTATS)/db/iocAdminSoft.db"
+
 cd ${TOP}
 
 ## Register all support components
@@ -12,10 +15,9 @@ dbLoadDatabase "dbd/simple.dbd"
 simple_registerRecordDeviceDriver pdbbase
 
 ## Load record instances
-dbLoadRecords("db/simple.db","P=$(MYPVPREFIX)")
+dbLoadRecords("db/simple.db","P=$(IOCNAME)")
+dbLoadRecords("$(IOCSTATS_DB)","IOC=$(IOCNAME)")
 
 cd ${TOP}/iocBoot/${IOC}
 iocInit
 
-## Start any sequence programs
-#seq sncxxx,"user=mjc23Host"

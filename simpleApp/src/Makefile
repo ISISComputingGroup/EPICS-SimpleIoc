@@ -16,10 +16,10 @@ DBD += simple.dbd
 simple_DBD += base.dbd
 
 # Include dbd files from all support applications:
-#simple_DBD += xxx.dbd
+simple_DBD += devIocStats.dbd
 
 # Add all the support libraries needed by this IOC
-#simple_LIBS += xxx
+simple_LIBS += devIocStats
 
 # simple_registerRecordDeviceDriver.cpp derives from simple.dbd
 simple_SRCS += simple_registerRecordDeviceDriver.cpp
