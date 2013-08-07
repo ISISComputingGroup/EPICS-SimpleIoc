@@ -25,9 +25,9 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-EPICS_BASE=$(TOP)/../../base/3-14-12-2
 DEVIOCSTATS=$(TOP)/../../support/devIocStats/3-1-11
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
 #RULES=/path/to/epics/support/module/rules/x-y
+include $(TOP)/../../ISIS_CONFIG.$(EPICS_HOST_ARCH)
