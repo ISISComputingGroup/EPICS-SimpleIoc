@@ -25,7 +25,8 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
 
 # EPICS_BASE usually appears last so other apps can override stuff:
-DEVIOCSTATS=$(TOP)/../../support/devIocStats/3-1-11
+DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-11
+PVDUMP=$(ISISSUPPORT)/pvdump
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
