@@ -19,7 +19,7 @@ simple_DBD += base.dbd
 simple_DBD += devIocStats.dbd pvdump.dbd
 
 # Add all the support libraries needed by this IOC
-simple_LIBS += devIocStats pvdump
+simple_LIBS += devIocStats pvdump easySQLite sqlite 
 
 # simple_registerRecordDeviceDriver.cpp derives from simple.dbd
 simple_SRCS += simple_registerRecordDeviceDriver.cpp
