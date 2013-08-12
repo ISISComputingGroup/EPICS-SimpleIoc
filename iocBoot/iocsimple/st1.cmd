@@ -5,7 +5,7 @@
 
 < envPaths
 
-epicsEnvSet "IOCNAME" "$(P=$(MYPVPREFIX))SIMPLE"
+epicsEnvSet "IOCNAME" "$(P=$(MYPVPREFIX))SIMPLE_1"
 epicsEnvSet "IOCSTATS_DB" "$(DEVIOCSTATS)/db/iocAdminSoft.db"
 
 cd ${TOP}
