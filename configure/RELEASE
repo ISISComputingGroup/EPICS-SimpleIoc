@@ -28,6 +28,9 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-11
 SQLITE=$(ISISSUPPORT)/sqlite
 PVDUMP=$(ISISSUPPORT)/pvdump
+TIMESTAMPRECORD=$(SUPPORT)/timestampRecord/1-0
+CAPUTLOG=$(SUPPORT)/caPutLog/3-3-3
+CSM=$(SUPPORT)/csm/4-2
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:

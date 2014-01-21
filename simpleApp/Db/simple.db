@@ -60,3 +60,6 @@ record(ai, "$(P)SIM:VALUE2")
     field(DTYP, "Soft Channel")
 }
 
+record(cvt, "$(P)CVT")
+{
+} 
