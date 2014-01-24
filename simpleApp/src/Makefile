@@ -21,6 +21,8 @@ simple_DBD += pvdump.dbd
 simple_DBD += caPutLog.dbd 
 simple_DBD += timestampRecord.dbd
 simple_DBD += cvtRecord.dbd
+simple_DBD += icpconfig.dbd
+simple_DBD += asSupport.dbd
 
 # Add all the support libraries needed by this IOC
 simple_LIBS += devIocStats 
@@ -28,6 +30,8 @@ simple_LIBS += pvdump easySQLite sqlite
 simple_LIBS += caPutLog
 simple_LIBS += timestampRecord
 simple_LIBS += cvtRecord csmbase
+simple_LIBS += icpconfig
+simple_LIBS += autosave
 
 # simple_registerRecordDeviceDriver.cpp derives from simple.dbd
 simple_SRCS += simple_registerRecordDeviceDriver.cpp
