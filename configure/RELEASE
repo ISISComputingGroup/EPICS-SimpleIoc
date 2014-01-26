@@ -26,12 +26,12 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-11
-SQLITE=$(ISISSUPPORT)/sqlite
-PVDUMP=$(ISISSUPPORT)/pvdump
+SQLITE=$(SUPPORT)/sqlite
+PVDUMP=$(SUPPORT)/pvdump
 TIMESTAMPRECORD=$(SUPPORT)/timestampRecord/1-0
 CAPUTLOG=$(SUPPORT)/caPutLog/3-3-3
 CSM=$(SUPPORT)/csm/4-2
-ICPCONFIG=$(ISISSUPPORT)/icpconfig
+ICPCONFIG=$(SUPPORT)/icpconfig
 AUTOSAVE=$(SUPPORT)/autosave/R5_0
 
 # Set RULES here if you want to take build rules from somewhere
