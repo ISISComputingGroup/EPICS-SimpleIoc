@@ -4,6 +4,7 @@ record(bo, "$(P)SIM")
     field(DTYP, "Soft Channel")
     field(ZNAM, "NO")
     field(ONAM, "YES")
+	info("testparam","testvalue")
 }
 
 record(bo, "$(P)DISABLE") 

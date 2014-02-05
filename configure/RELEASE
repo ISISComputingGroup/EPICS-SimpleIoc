@@ -33,6 +33,7 @@ CAPUTLOG=$(SUPPORT)/caPutLog/3-3-3
 CSM=$(SUPPORT)/csm/4-2
 ICPCONFIG=$(SUPPORT)/icpconfig
 AUTOSAVE=$(SUPPORT)/autosave/R5_0
+UTILITIES=$(SUPPORT)/utilities
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
