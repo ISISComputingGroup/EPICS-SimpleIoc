@@ -17,7 +17,7 @@ simple_registerRecordDeviceDriver pdbbase
 
 < $(IOCSTARTUP)/dbload.cmd
 
-dbLoadRecords("db/simple.db","P=$(IOCNAME):")
+dbLoadRecords("db/simple.db","P=$(MYPVPREFIX)SIMPLE:")
 
 < $(IOCSTARTUP)/preiocinit.cmd
 
