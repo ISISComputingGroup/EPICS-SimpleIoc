@@ -15,10 +15,10 @@ dbLoadDatabase "dbd/simple.dbd"
 simple_registerRecordDeviceDriver pdbbase
 
 ## Load record instances
-dbLoadRecords("db/simple.db","P=$(IOCNAME):")
+dbLoadRecords("db/simple.db","P=$(IOCNAME)")
 dbLoadRecords("$(IOCSTATS_DB)","IOC=$(IOCNAME)")
 
-pvdump("../pvdump/PV_data.db", "$(IOCNAME):")
+pvdump("../pvdump/PV_data.db", "$(IOCNAME)")
 
 cd ${TOP}/iocBoot/${IOC}
 iocInit

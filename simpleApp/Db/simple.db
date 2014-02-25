@@ -1,4 +1,4 @@
-record(bo, "$(P)SIM")
+record(bo, "$(P):SIM")
 {
     field(SCAN, "Passive")
     field(DTYP, "Soft Channel")
@@ -7,7 +7,7 @@ record(bo, "$(P)SIM")
     info("testparam","testvalue")
 }
 
-record(bo, "$(P)DISABLE") 
+record(bo, "$(P):DISABLE") 
 {
     field(DESC, "Disable comms")
     field(PINI, "YES")
@@ -16,7 +16,7 @@ record(bo, "$(P)DISABLE")
     field(ZNAM, "COMMS ENABLED")
     field(ONAM, "COMMS DISABLED")
 }
-record(ai, "$(P)VALUE1")
+record(ai, "$(P):VALUE1")
 {
     field(VAL, 1)
     field(HIHI,18)
@@ -27,20 +27,20 @@ record(ai, "$(P)VALUE1")
     field(HSV,"MINOR")
     field(LSV,"MINOR")
     field(LLSV,"MAJOR")
-    field(SIML, "$(P)SIM")
-    field(SIOL, "$(P)SIM::VALUE1")
-    field(SDIS, "$(P)DISABLE")
+    field(SIML, "$(P):SIM")
+    field(SIOL, "$(P):SIM:VALUE1")
+    field(SDIS, "$(P):DISABLE")
 }
 
-record(ai, "$(P)VALUE2")
+record(ai, "$(P):VALUE2")
 {
     field(VAL, 2)
-    field(SIML, "$(P)SIM")
-    field(SIOL, "$(P)SIM::VALUE2")
-    field(SDIS, "$(P)DISABLE")
+    field(SIML, "$(P):SIM")
+    field(SIOL, "$(P):SIM:VALUE2")
+    field(SDIS, "$(P):DISABLE")
 }
 
-record(calc,"$(P)DIFF")
+record(calc,"$(P):DIFF")
 {
     field(SCAN,"1 second")
     field(INPA, "$(P):VALUE1")
@@ -49,18 +49,18 @@ record(calc,"$(P)DIFF")
 }
 ### SIMULATION RECORDS ###
 
-record(ai, "$(P)SIM:VALUE1")
+record(ai, "$(P):SIM:VALUE1")
 {
     field(SCAN, "Passive")
     field(DTYP, "Soft Channel")
 }
 
-record(ai, "$(P)SIM:VALUE2")
+record(ai, "$(P):SIM:VALUE2")
 {
     field(SCAN, "Passive")
     field(DTYP, "Soft Channel")
 }
 
-record(cvt, "$(P)CVT")
+record(cvt, "$(P):CVT")
 {
 } 
