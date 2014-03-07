@@ -24,3 +24,5 @@ dbLoadRecords("db/simple.db","P=$(MYPVPREFIX)SIMPLE")
 cd ${TOP}/iocBoot/${IOC}
 iocInit
 
+< $(IOCSTARTUP)/postiocinit.cmd
+
