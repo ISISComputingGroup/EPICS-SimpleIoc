@@ -16,9 +16,10 @@ record(bo, "$(P):DISABLE")
     field(ZNAM, "COMMS ENABLED")
     field(ONAM, "COMMS DISABLED")
 }
+
 record(ai, "$(P):VALUE1")
 {
-    field(VAL, 1)
+    field(INP, "$(P):VALUE1:SP")
     field(HIHI,18)
     field(HIGH,15)
     field(LOW,5)
@@ -31,6 +32,26 @@ record(ai, "$(P):VALUE1")
     field(SIOL, "$(P):SIM:VALUE1")
     field(SDIS, "$(P):DISABLE")
 }
+
+record(ao, "$(P):VALUE1:SP")
+{
+    field(PINI, "YES")
+    field(VAL, 1)
+    field(HIHI,18)
+    field(HIGH,15)
+    field(LOW,5)
+    field(LOLO,2)
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LSV,"MINOR")
+    field(LLSV,"MAJOR")
+    field(SIML, "$(P):SIM")
+    field(SIOL, "$(P):SIM:VALUE1")
+    field(SDIS, "$(P):DISABLE")
+    field(FLNK, "$(P):VALUE1")
+}
+
+alias("$(P):VALUE1", "$(P):VALUE1:SP:RBV")
 
 record(ai, "$(P):VALUE2")
 {
