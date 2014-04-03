@@ -85,3 +85,7 @@ record(ai, "$(P):SIM:VALUE2")
 record(cvt, "$(P):CVT")
 {
 } 
+
+record(busy, "$(P):BUSY")
+{
+}

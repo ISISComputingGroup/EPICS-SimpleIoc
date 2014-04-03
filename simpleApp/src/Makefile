@@ -24,6 +24,8 @@ simple_DBD += cvtRecord.dbd
 simple_DBD += icpconfig.dbd
 simple_DBD += asSupport.dbd
 simple_DBD += pvcomplete.dbd
+simple_DBD += busySupport.dbd
+
 
 # Add all the support libraries needed by this IOC
 simple_LIBS += devIocStats 
@@ -33,6 +35,7 @@ simple_LIBS += timestampRecord
 simple_LIBS += cvtRecord csmbase
 simple_LIBS += icpconfig
 simple_LIBS += autosave
+simple_LIBS += busy
 simple_LIBS += utilities
 simple_LIBS += pvcomplete
 

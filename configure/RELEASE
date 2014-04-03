@@ -36,6 +36,9 @@ AUTOSAVE=$(SUPPORT)/autosave/R5_0
 UTILITIES=$(SUPPORT)/utilities
 ZLIB=$(SUPPORT)/zlib/1-2-8
 PVCOMPLETE=$(SUPPORT)/pvcomplete
+BUSY=$(SUPPORT)/busy/1-4
+ASYN=$(SUPPORT)/asyn/4-22
+ONCRPC=$(SUPPORT)/oncrpc/2
 
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
