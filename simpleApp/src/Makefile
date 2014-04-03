@@ -35,7 +35,7 @@ simple_LIBS += timestampRecord
 simple_LIBS += cvtRecord csmbase
 simple_LIBS += icpconfig
 simple_LIBS += autosave
-simple_LIBS += busy
+simple_LIBS += busy asyn
 simple_LIBS += utilities
 simple_LIBS += pvcomplete
 
