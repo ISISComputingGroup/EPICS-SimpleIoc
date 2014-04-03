@@ -86,6 +86,14 @@ record(cvt, "$(P):CVT")
 {
 } 
 
+
+record(ao, "$(P):TESTBUSY")
+{
+    field(OUT, "$(P):BUSY.VAL PP")
+    field(OMSL, "supervisory")
+    field(DTYP, "Soft Cahnnel")
+}
+
 record(busy, "$(P):BUSY")
 {
 }
