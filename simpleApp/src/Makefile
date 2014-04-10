@@ -25,6 +25,7 @@ simple_DBD += icpconfig.dbd
 simple_DBD += asSupport.dbd
 simple_DBD += pvcomplete.dbd
 simple_DBD += busySupport.dbd
+simple_DBD += utilities.dbd
 
 
 # Add all the support libraries needed by this IOC
