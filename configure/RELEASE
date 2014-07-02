@@ -22,7 +22,6 @@
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 
 # If using the sequencer, point SNCSEQ at its top directory:
-#SNCSEQ=$(EPICS_BASE)/../modules/soft/seq
 
 # EPICS_BASE usually appears last so other apps can override stuff:
 DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-11
@@ -30,6 +29,7 @@ SQLITE=$(SUPPORT)/sqlite
 PVDUMP=$(SUPPORT)/pvdump
 TIMESTAMPRECORD=$(SUPPORT)/timestampRecord/1-0
 CAPUTLOG=$(SUPPORT)/caPutLog/3-3-3
+SNCSEQ=$(SUPPORT)/seq/2-1-11
 CSM=$(SUPPORT)/csm/4-2
 ICPCONFIG=$(SUPPORT)/icpconfig
 AUTOSAVE=$(SUPPORT)/autosave/R5_0
@@ -39,7 +39,7 @@ PVCOMPLETE=$(SUPPORT)/pvcomplete
 BUSY=$(SUPPORT)/busy/1-4
 ASYN=$(SUPPORT)/asyn/4-22
 ONCRPC=$(SUPPORT)/oncrpc/2
-
+STD=$(SUPPORT)/std/R3_1
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
 #RULES=/path/to/epics/support/module/rules/x-y

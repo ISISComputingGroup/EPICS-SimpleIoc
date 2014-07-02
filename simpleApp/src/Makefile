@@ -26,6 +26,7 @@ simple_DBD += asSupport.dbd
 simple_DBD += pvcomplete.dbd
 simple_DBD += busySupport.dbd
 simple_DBD += utilities.dbd
+simple_DBD += stdSupport.dbd
 
 
 # Add all the support libraries needed by this IOC
@@ -39,6 +40,7 @@ simple_LIBS += autosave
 simple_LIBS += busy asyn
 simple_LIBS += utilities
 simple_LIBS += pvcomplete
+simple_LIBS += std
 
 # simple_registerRecordDeviceDriver.cpp derives from simple.dbd
 simple_SRCS += simple_registerRecordDeviceDriver.cpp
