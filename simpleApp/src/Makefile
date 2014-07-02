@@ -37,10 +37,11 @@ simple_LIBS += timestampRecord
 simple_LIBS += cvtRecord csmbase
 simple_LIBS += icpconfig
 simple_LIBS += autosave
-simple_LIBS += busy asyn
 simple_LIBS += utilities
 simple_LIBS += pvcomplete
 simple_LIBS += std
+simple_LIBS += busy asyn
+simple_LIBS += seq pv
 
 # simple_registerRecordDeviceDriver.cpp derives from simple.dbd
 simple_SRCS += simple_registerRecordDeviceDriver.cpp
