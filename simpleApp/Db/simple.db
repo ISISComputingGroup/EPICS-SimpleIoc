@@ -19,6 +19,7 @@ record(bo, "$(P):DISABLE")
 
 record(ai, "$(P):VALUE1")
 {
+    info(INTEREST, "HIGH")
     field(INP, "$(P):VALUE1:SP")
     field(HIHI,18)
     field(HIGH,15)
@@ -55,6 +56,7 @@ alias("$(P):VALUE1", "$(P):VALUE1:SP:RBV")
 
 record(ai, "$(P):VALUE2")
 {
+    info(INTEREST, "MEDIUM")
     field(VAL, 2)
     field(SIML, "$(P):SIM")
     field(SIOL, "$(P):SIM:VALUE2")
