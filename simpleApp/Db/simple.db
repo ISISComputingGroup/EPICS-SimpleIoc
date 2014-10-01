@@ -33,6 +33,7 @@ record(ai, "$(P):VALUE1")
     field(SIML, "$(P):SIM")
     field(SIOL, "$(P):SIM:VALUE1")
     field(SDIS, "$(P):DISABLE")
+	field(EGU, "")
 }
 
 record(ao, "$(P):VALUE1:SP")
@@ -63,6 +64,7 @@ record(ai, "$(P):VALUE2")
     field(SIML, "$(P):SIM")
     field(SIOL, "$(P):SIM:VALUE2")
     field(SDIS, "$(P):DISABLE")
+	field(EGU, "")
 }
 
 record(calc,"$(P):DIFF")
