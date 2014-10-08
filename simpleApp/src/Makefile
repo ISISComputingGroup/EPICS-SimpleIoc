@@ -27,6 +27,8 @@ simple_DBD += pvcomplete.dbd
 simple_DBD += busySupport.dbd
 simple_DBD += utilities.dbd
 simple_DBD += stdSupport.dbd
+simple_DBD += calcSupport.dbd
+simple_DBD += asubFunctions.dbd
 
 
 # Add all the support libraries needed by this IOC
@@ -40,6 +42,8 @@ simple_LIBS += autosave
 simple_LIBS += utilities
 simple_LIBS += pvcomplete
 simple_LIBS += std
+simple_LIBS += calc
+simple_LIBS += asubFunctions
 simple_LIBS += busy asyn
 simple_LIBS += seq pv
 

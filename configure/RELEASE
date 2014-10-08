@@ -40,6 +40,9 @@ BUSY=$(SUPPORT)/busy/1-4
 ASYN=$(SUPPORT)/asyn/4-22
 ONCRPC=$(SUPPORT)/oncrpc/2
 STD=$(SUPPORT)/std/R3_1
+CALC=$(SUPPORT)/calc/2-9
+SSCAN=$(SUPPORT)/sscan/2-8
+ASUBFUNCTIONS=$(SUPPORT)/asubFunctions
 # Set RULES here if you want to take build rules from somewhere
 # other than EPICS_BASE:
 #RULES=/path/to/epics/support/module/rules/x-y
