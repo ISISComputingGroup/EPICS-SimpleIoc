@@ -43,6 +43,7 @@ simple_LIBS += utilities
 simple_LIBS += pvcomplete
 simple_LIBS += std
 simple_LIBS += calc
+simple_LIBS += sscan
 simple_LIBS += asubFunctions
 simple_LIBS += busy asyn
 simple_LIBS += seq pv
