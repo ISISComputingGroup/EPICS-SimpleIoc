@@ -1,4 +1,4 @@
-record(bo, "$(P):SIM")
+record(bo, "$(P)SIM")
 {
     field(SCAN, "Passive")
     field(DTYP, "Soft Channel")
@@ -7,7 +7,7 @@ record(bo, "$(P):SIM")
     info("testparam","testvalue")
 }
 
-record(bo, "$(P):DISABLE") 
+record(bo, "$(P)DISABLE") 
 {
     field(DESC, "Disable comms")
     field(PINI, "YES")
@@ -17,11 +17,11 @@ record(bo, "$(P):DISABLE")
     field(ONAM, "COMMS DISABLED")
 }
 
-record(ai, "$(P):VALUE1")
+record(ai, "$(P)VALUE1")
 {
     info(INTEREST, "HIGH")
 	field(DESC, "Testing")
-    field(INP, "$(P):VALUE1:SP")
+    field(INP, "$(P)VALUE1:SP")
     field(HIHI,18)
     field(HIGH,15)
     field(LOW,5)
@@ -30,13 +30,13 @@ record(ai, "$(P):VALUE1")
     field(HSV,"MINOR")
     field(LSV,"MINOR")
     field(LLSV,"MAJOR")
-    field(SIML, "$(P):SIM")
-    field(SIOL, "$(P):SIM:VALUE1")
-    field(SDIS, "$(P):DISABLE")
+    field(SIML, "$(P)SIM")
+    field(SIOL, "$(P)SIM:VALUE1")
+    field(SDIS, "$(P)DISABLE")
 	field(EGU, "")
 }
 
-record(ao, "$(P):VALUE1:SP")
+record(ao, "$(P)VALUE1:SP")
 {
     field(PINI, "YES")
     field(VAL, 1)
@@ -48,58 +48,77 @@ record(ao, "$(P):VALUE1:SP")
     field(HSV,"MINOR")
     field(LSV,"MINOR")
     field(LLSV,"MAJOR")
-    field(SIML, "$(P):SIM")
-    field(SIOL, "$(P):SIM:VALUE1")
-    field(SDIS, "$(P):DISABLE")
-    field(FLNK, "$(P):VALUE1")
+    field(SIML, "$(P)SIM")
+    field(SIOL, "$(P)SIM:VALUE1")
+    field(SDIS, "$(P)DISABLE")
+    field(FLNK, "$(P)VALUE1")
 }
 
-alias("$(P):VALUE1", "$(P):VALUE1:SP:RBV")
+alias("$(P)VALUE1", "$(P)VALUE1:SP:RBV")
 
-record(ai, "$(P):VALUE2")
+record(ai, "$(P)VALUE2")
 {
     info(INTEREST, "MEDIUM")
 	field(DESC, "Testing")
     field(VAL, 2)
-    field(SIML, "$(P):SIM")
-    field(SIOL, "$(P):SIM:VALUE2")
-    field(SDIS, "$(P):DISABLE")
+    field(SIML, "$(P)SIM")
+    field(SIOL, "$(P)SIM:VALUE2")
+    field(SDIS, "$(P)DISABLE")
 	field(EGU, "")
 }
 
-record(calc,"$(P):DIFF")
+record(calc,"$(P)DIFF")
 {
     field(SCAN,"1 second")
-    field(INPA, "$(P):VALUE1")
-    field(INPB, "$(P):VALUE2")
+    field(INPA, "$(P)VALUE1")
+    field(INPB, "$(P)VALUE2")
     field("CALC", "A - B")
+}
+
+record(ai,"$(P)RANDVAL"){
+    field(DTYP,"Random")
+    field(DESC,"Random numbers")
+    field(SCAN,"1 second")
+    field(INP,"324235")
+    field(LINR,"LINEAR")
+    field(ESLO,1)
+    field(EOFF,0)
+    field(SIML, "$(P)SIM")
+    field(SIOL, "$(P)SIM:RANDVAL")
+    field(SDIS, "$(P)DISABLE")
 }
 ### SIMULATION RECORDS ###
 
-record(ai, "$(P):SIM:VALUE1")
+record(ai, "$(P)SIM:RANDVAL")
 {
     field(SCAN, "Passive")
     field(DTYP, "Soft Channel")
 }
 
-record(ai, "$(P):SIM:VALUE2")
+record(ai, "$(P)SIM:VALUE1")
 {
     field(SCAN, "Passive")
     field(DTYP, "Soft Channel")
 }
 
-record(cvt, "$(P):CVT")
+record(ai, "$(P)SIM:VALUE2")
+{
+    field(SCAN, "Passive")
+    field(DTYP, "Soft Channel")
+}
+
+record(cvt, "$(P)CVT")
 {
 } 
 
 
-record(ao, "$(P):TESTBUSY")
+record(ao, "$(P)TESTBUSY")
 {
-    field(OUT, "$(P):BUSY.VAL PP")
+    field(OUT, "$(P)BUSY.VAL PP")
     field(OMSL, "supervisory")
     field(DTYP, "Soft Cahnnel")
 }
 
-record(busy, "$(P):BUSY")
+record(busy, "$(P)BUSY")
 {
 }

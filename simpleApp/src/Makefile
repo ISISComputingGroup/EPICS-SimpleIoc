@@ -29,6 +29,7 @@ simple_DBD += utilities.dbd
 simple_DBD += stdSupport.dbd
 simple_DBD += calcSupport.dbd
 simple_DBD += asubFunctions.dbd
+simple_DBD += randdev.dbd
 
 
 # Add all the support libraries needed by this IOC
@@ -54,6 +55,9 @@ simple_SRCS += simple_registerRecordDeviceDriver.cpp
 # Build the main IOC entry point on workstation OSs.
 simple_SRCS_DEFAULT += simpleMain.cpp
 simple_SRCS_vxWorks += -nil-
+
+simple_SRCS += devRand.c
+simple_SRCS += devRandAsync.c
 
 # Add support from base/src/vxWorks if needed
 #simple_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
