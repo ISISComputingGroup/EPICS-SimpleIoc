@@ -38,7 +38,6 @@ record(ai, "$(P)VALUE1")
 
 record(ao, "$(P)VALUE1:SP")
 {
-    field(PINI, "YES")
     field(VAL, 1)
     field(HIHI,18)
     field(HIGH,15)
@@ -87,6 +86,19 @@ record(ai,"$(P)RANDVAL"){
     field(SIOL, "$(P)SIM:RANDVAL")
     field(SDIS, "$(P)DISABLE")
 }
+
+record(stringin,"$(P)HELLO"){
+    field(DESC,"A stringin record")
+    field(VAL, "Hello!")
+}
+
+record(waveform, "$(P)CHARWAV")
+{
+    field(DESC, "A char waveform record")
+    field(NELM, "256")
+    field(FTVL, "CHAR")
+}
+
 ### SIMULATION RECORDS ###
 
 record(ai, "$(P)SIM:RANDVAL")
@@ -111,12 +123,11 @@ record(cvt, "$(P)CVT")
 {
 } 
 
-
 record(ao, "$(P)TESTBUSY")
 {
     field(OUT, "$(P)BUSY.VAL PP")
     field(OMSL, "supervisory")
-    field(DTYP, "Soft Cahnnel")
+    field(DTYP, "Soft Channel")
 }
 
 record(busy, "$(P)BUSY")
