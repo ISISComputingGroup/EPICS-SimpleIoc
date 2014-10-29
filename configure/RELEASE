@@ -35,6 +35,7 @@ PUGIXML=$(SUPPORT)/pugixml
 ICPCONFIG=$(SUPPORT)/icpconfig
 AUTOSAVE=$(SUPPORT)/autosave/R5_0
 UTILITIES=$(SUPPORT)/utilities
+PCRE=$(SUPPORT)/pcre
 ZLIB=$(SUPPORT)/zlib/1-2-8
 PVCOMPLETE=$(SUPPORT)/pvcomplete
 BUSY=$(SUPPORT)/busy/1-4
