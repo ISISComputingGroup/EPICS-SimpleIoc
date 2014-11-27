@@ -34,7 +34,7 @@ simple_DBD += randdev.dbd
 
 # Add all the support libraries needed by this IOC
 simple_LIBS += devIocStats 
-simple_LIBS += pvdump easySQLite sqlite 
+simple_LIBS += pvdump $(MYSQLLIB) easySQLite sqlite 
 simple_LIBS += caPutLog
 simple_LIBS += timestampRecord
 simple_LIBS += cvtRecord csmbase
