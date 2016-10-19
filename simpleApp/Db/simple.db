@@ -88,7 +88,8 @@ record(ai,"$(P)RANDVAL"){
 }
 
 record(stringin,"$(P)HELLO"){
-    field(DESC,"A stringin record")
+    info(INTEREST, "HIGH")
+	field(DESC,"A stringin record")
     field(VAL, "Hello!")
 }
 
@@ -98,6 +99,45 @@ record(waveform, "$(P)CHARWAV")
     field(NELM, "256")
     field(FTVL, "CHAR")
 }
+
+record(ai, "$(P)VALUE:P3")
+{
+    info(INTEREST, "HIGH")
+	field(DESC, "A value with PREC 3")
+	field(VAL, "1")
+	field(PREC, "3")
+    field(SIML, "$(P)SIM")
+    field(SDIS, "$(P)DISABLE")
+	field(EGU, "")
+}
+alias("$(P)VALUE:P3", "$(P)VALUE:P3:SP")
+alias("$(P)VALUE:P3", "$(P)VALUE:P3:SP:RBV")
+
+record(ai, "$(P)VALUE:P5")
+{
+    info(INTEREST, "HIGH")
+	field(DESC, "A value with PREC 5")
+	field(VAL, "1")
+	field(PREC, "5")
+    field(SIML, "$(P)SIM")
+    field(SDIS, "$(P)DISABLE")
+	field(EGU, "")
+}
+alias("$(P)VALUE:P5", "$(P)VALUE:P5:SP")
+alias("$(P)VALUE:P5", "$(P)VALUE:P5:SP:RBV")
+
+record(longin, "$(P)LONG")
+{
+	info(INTEREST, "HIGH")
+	field(DESC, "An integer")
+	field(VAL, "1")
+	field(SIML, "$(P)SIM")
+    field(SDIS, "$(P)DISABLE")
+	field(EGU, "")
+}
+alias("$(P)LONG", "$(P)LONG:SP")
+alias("$(P)LONG", "$(P)LONG:SP:RBV")
+
 
 ### SIMULATION RECORDS ###
 
