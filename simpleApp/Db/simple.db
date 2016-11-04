@@ -96,7 +96,7 @@ record(stringin,"$(P)HELLO"){
 record(waveform, "$(P)CHARWAV")
 {
     field(DESC, "A char waveform record")
-    field(NELM, "256")
+    field(NELM, "8192")
     field(FTVL, "CHAR")
 }
 
