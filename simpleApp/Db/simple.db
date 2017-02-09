@@ -138,6 +138,26 @@ record(longin, "$(P)LONG")
 alias("$(P)LONG", "$(P)LONG:SP")
 alias("$(P)LONG", "$(P)LONG:SP:RBV")
 
+record(waveform, "$(P)SPEC:1:1:X")
+{
+	field(FTVL, "FLOAT")
+    field(DTYP, "Soft Channel")
+	field(NELM, 8000)
+}
+
+record(waveform, "$(P)SPEC:1:1:Y")
+{
+	field(FTVL, "FLOAT")
+    field(DTYP, "Soft Channel")
+	field(NELM, 8000)
+}
+
+record(longin, "$(P)LENGTH")
+{
+    field(DTYP, "Soft Channel")
+	field(VAL, "10")
+}
+
 
 ### SIMULATION RECORDS ###
 
