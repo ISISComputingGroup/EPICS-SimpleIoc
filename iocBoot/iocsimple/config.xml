@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <ioc_config xmlns:xi="http://www.w3.org/2001/XInclude">
 <config_part>
-<ioc_desc>Basic IOC with a small number of PVs</ioc_desc>
+<ioc_desc>Basic IOC providing some PVs for some simple data types</ioc_desc>
 </config_part>
 </ioc_config>
