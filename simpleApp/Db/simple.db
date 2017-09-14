@@ -121,6 +121,26 @@ record(waveform, "$(P)CHARWAV")
     field(FTVL, "CHAR")
 }
 
+record(mbbi, "$(P)MBBI")
+{
+    field(DESC, "A MBBI record")
+    field(ZRVL, 0)
+    field(ZRST, "HAPPY")
+    field(ONVL, 1)
+    field(ONST, "SAD")
+    field(TWVL, 2)
+    field(TWST, "CHEERFUL")
+    field(THVL, 3)
+    field(THST, "GRUMPY")
+}
+
+record(bi, "$(P)BI")
+{
+    field(DESC, "A BI record")
+    field(ZNAM, "NO")
+    field(ONAM, "YES")
+}
+
 record(ai, "$(P)VALUE:P3")
 {
     info(INTEREST, "HIGH")
