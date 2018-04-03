@@ -34,21 +34,6 @@ record(ai, "$(P)VALUE1")
     field(SIOL, "$(P)SIM:VALUE1")
     field(SDIS, "$(P)DISABLE")
 	field(EGU, "")
-    info(archive, "VAL 1")
-    info(LOG_column_header1, "Value 1")
-}
-
-record(bi, "$(P)LOGGING")
-{
-    field(DESC, "Set logging")
-    field(ZNAM, "Off")
-    field(ONAM, "On")
-    field(PINI, "YES")
-    field(VAL, "0")
-    info(archive, "VAL 1")
-    info(LOG_trigger, "")
-    info(LOG_header1, "Header line 1")
-    info(LOG_period_seconds, "0.5")
 }
 
 record(ao, "$(P)VALUE1:SP")
@@ -70,6 +55,25 @@ record(ao, "$(P)VALUE1:SP")
 
 alias("$(P)VALUE1", "$(P)VALUE1:SP:RBV")
 
+record(ao, "$(P)VALUE2:SP")
+{
+    field(VAL, 1)
+    field(HIHI,18)
+    field(HIGH,15)
+    field(LOW,5)
+    field(LOLO,2)
+    field(HHSV,"MAJOR")
+    field(HSV,"MINOR")
+    field(LSV,"MINOR")
+    field(LLSV,"MAJOR")
+    field(SIML, "$(P)SIM")
+    field(SIOL, "$(P)SIM:VALUE2")
+    field(SDIS, "$(P)DISABLE")
+    field(FLNK, "$(P)VALUE1")
+}
+
+alias("$(P)VALUE2", "$(P)VALUE2:SP:RBV")
+
 record(ai, "$(P)VALUE2")
 {
     info(INTEREST, "MEDIUM")
@@ -79,9 +83,6 @@ record(ai, "$(P)VALUE2")
     field(SIOL, "$(P)SIM:VALUE2")
     field(SDIS, "$(P)DISABLE")
 	field(EGU, "")
-    info(archive, "VAL 1")
-    info(LOG_column_header2, "Value 2")
-    info(LOG_column_template2, "{this_pv|10.6f}")
 }
 
 record(calc,"$(P)DIFF")
@@ -109,9 +110,6 @@ record(stringin,"$(P)HELLO"){
     info(INTEREST, "HIGH")
 	field(DESC,"A stringin record")
     field(VAL, "Hello!")
-    info(archive, "VAL 1")
-    info(LOG_header2, "Hello: {this_pv}")    
-    info(LOG_header3, "")
 }
 
 record(waveform, "$(P)CHARWAV")
@@ -119,26 +117,6 @@ record(waveform, "$(P)CHARWAV")
     field(DESC, "A char waveform record")
     field(NELM, "8192")
     field(FTVL, "CHAR")
-}
-
-record(mbbi, "$(P)MBBI")
-{
-    field(DESC, "A MBBI record")
-    field(ZRVL, 0)
-    field(ZRST, "HAPPY")
-    field(ONVL, 1)
-    field(ONST, "SAD")
-    field(TWVL, 2)
-    field(TWST, "CHEERFUL")
-    field(THVL, 3)
-    field(THST, "GRUMPY")
-}
-
-record(bi, "$(P)BI")
-{
-    field(DESC, "A BI record")
-    field(ZNAM, "NO")
-    field(ONAM, "YES")
 }
 
 record(ai, "$(P)VALUE:P3")
@@ -178,6 +156,7 @@ record(longin, "$(P)LONG")
 }
 alias("$(P)LONG", "$(P)LONG:SP")
 alias("$(P)LONG", "$(P)LONG:SP:RBV")
+
 
 ### SIMULATION RECORDS ###
 
