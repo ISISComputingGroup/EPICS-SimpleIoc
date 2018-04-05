@@ -72,8 +72,6 @@ record(ao, "$(P)VALUE2:SP")
     field(FLNK, "$(P)VALUE1")
 }
 
-alias("$(P)VALUE2", "$(P)VALUE2:SP:RBV")
-
 record(ai, "$(P)VALUE2")
 {
     info(INTEREST, "MEDIUM")
@@ -84,6 +82,8 @@ record(ai, "$(P)VALUE2")
     field(SDIS, "$(P)DISABLE")
 	field(EGU, "")
 }
+
+alias("$(P)VALUE2", "$(P)VALUE2:SP:RBV")
 
 record(calc,"$(P)DIFF")
 {
