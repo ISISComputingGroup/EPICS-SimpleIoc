@@ -17,6 +17,7 @@ record(bo, "$(P)DISABLE")
     field(ONAM, "COMMS DISABLED")
 }
 
+# Used in system tests
 record(ai, "$(P)VALUE1")
 {
     info(INTEREST, "HIGH")
@@ -36,6 +37,7 @@ record(ai, "$(P)VALUE1")
 	field(EGU, "")
 }
 
+# Used in system tests
 record(ao, "$(P)VALUE1:SP")
 {
     field(VAL, 1)
@@ -55,6 +57,7 @@ record(ao, "$(P)VALUE1:SP")
 
 alias("$(P)VALUE1", "$(P)VALUE1:SP:RBV")
 
+# Used in system tests
 record(ao, "$(P)VALUE2:SP")
 {
     field(VAL, 1)
@@ -72,6 +75,7 @@ record(ao, "$(P)VALUE2:SP")
     field(FLNK, "$(P)VALUE1")
 }
 
+# Used in system tests
 record(ai, "$(P)VALUE2")
 {
     info(INTEREST, "MEDIUM")
@@ -81,8 +85,12 @@ record(ai, "$(P)VALUE2")
     field(SIOL, "$(P)SIM:VALUE2")
     field(SDIS, "$(P)DISABLE")
 	field(EGU, "")
+    info(archive, "VAL 1")	
+    info(LOG_column_header2, "Value 2")	
+    info(LOG_column_template2, "{this_pv|10.6f}")
 }
 
+# Used in system tests
 alias("$(P)VALUE2", "$(P)VALUE2:SP:RBV")
 
 record(calc,"$(P)DIFF")
@@ -91,6 +99,9 @@ record(calc,"$(P)DIFF")
     field(INPA, "$(P)VALUE1")
     field(INPB, "$(P)VALUE2")
     field("CALC", "A - B")
+    info(archive, "VAL 1")	
+    info(LOG_header2, "Hello: {this_pv}")    	
+    info(LOG_header3, "")
 }
 
 record(ai,"$(P)RANDVAL"){
@@ -117,6 +128,28 @@ record(waveform, "$(P)CHARWAV")
     field(DESC, "A char waveform record")
     field(NELM, "8192")
     field(FTVL, "CHAR")
+}
+
+# Used in system tests
+record(mbbi, "$(P)MBBI")	
+{	
+    field(DESC, "A MBBI record")	
+    field(ZRVL, 0)	
+    field(ZRST, "HAPPY")	
+    field(ONVL, 1)	
+    field(ONST, "SAD")	
+    field(TWVL, 2)	
+    field(TWST, "CHEERFUL")	
+    field(THVL, 3)	
+    field(THST, "GRUMPY")	
+}	
+	
+# Used in system tests
+record(bi, "$(P)BI")	
+{	
+    field(DESC, "A BI record")	
+    field(ZNAM, "NO")	
+    field(ONAM, "YES")	
 }
 
 record(ai, "$(P)VALUE:P3")
