@@ -29,6 +29,7 @@ simple_DBD += stdSupport.dbd
 simple_DBD += calcSupport.dbd
 simple_DBD += asubFunctions.dbd
 simple_DBD += randdev.dbd
+simple_DBD += asyn.dbd
 
 
 # Add all the support libraries needed by this IOC

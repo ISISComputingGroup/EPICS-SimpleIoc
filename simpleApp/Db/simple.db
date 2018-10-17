@@ -130,6 +130,22 @@ record(waveform, "$(P)CHARWAV")
     field(FTVL, "CHAR")
 }
 
+record(waveform, "$(P)DBLWAV")
+{
+    field(DESC, "A double waveform record")
+    field(NELM, "16")
+    field(FTVL, "DOUBLE")
+}
+
+record(acalcout, "$(P)ARRAYCALC")
+{
+	field(NELM, "16")
+	field(CALC, "AA := AA + IX; AA")
+	field(OOPT, "Every Time")
+    field(OUT, "$(P)DBLWAV PP")
+    field(SCAN, "10 second")
+}
+
 # Used in system tests
 record(mbbi, "$(P)MBBI")	
 {	
