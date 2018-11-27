@@ -241,3 +241,19 @@ record(ao, "$(P)TESTBUSY")
 record(busy, "$(P)BUSY")
 {
 }
+
+record(ao, "$(P)CRASHVALUE")
+{
+     field(VAL, "0")
+}
+
+
+record(aSub, "$(P)FORCECRASH")
+{
+    field(DESC, "Forces IOC crash when INPA==1")
+    field(SNAM, "forcecrash")
+    field(INPA, "$(P)CRASHVALUE CP")
+    field(FTA, "LONG")
+    field(PINI, "YES")
+
+}

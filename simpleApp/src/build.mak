@@ -30,6 +30,7 @@ simple_DBD += calcSupport.dbd
 simple_DBD += asubFunctions.dbd
 simple_DBD += randdev.dbd
 simple_DBD += asyn.dbd
+simple_DBD += forcecrash.dbd
 
 # Add all the support libraries needed by this IOC
 simple_LIBS += devIocStats 
@@ -56,6 +57,7 @@ simple_SRCS_vxWorks += -nil-
 
 simple_SRCS += devRand.c
 simple_SRCS += devRandAsync.c
+simple_SRCS += forcecrash.c
 
 # Add support from base/src/vxWorks if needed
 #simple_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
