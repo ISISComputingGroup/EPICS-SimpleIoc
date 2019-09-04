@@ -1,0 +1,13 @@
+file "channel_access_test.template" {
+    pattern{P, RECORD_TYPE, RECORD_NAME, ISB, ISMBB}
+    {"\$(P)", bo, BO, " ", "#"}
+    {"\$(P)", bi, BI, " ", "#"}
+    {"\$(P)", mbbi, MBBI, "#", " "}
+    {"\$(P)", mbbo, MBBO, "#", " "}
+    {"\$(P)", ao, AO, "#", "#"}
+    {"\$(P)", ai, AI, "#", "#"}
+    {"\$(P)", stringin, STRINGIN, "#", "#"}
+    {"\$(P)", stringout, STRINGOUT, "#", "#"}
+    {"\$(P)", calc, CALC, "#", "#"}
+    {"\$(P)", calcout, CALCOUT, "#", "#"}
+}

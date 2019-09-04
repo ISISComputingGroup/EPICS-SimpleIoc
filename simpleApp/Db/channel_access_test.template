@@ -1,0 +1,53 @@
+
+record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):RO")
+{
+    field(ASG, "READONLY")
+    field(VAL, "0")
+$(ISB)   field(ZNAM, "OFF")
+$(ISB)   field(ONAM, "ON")
+#$(ISMBB)   field(ZRVL, "OFF")
+#$(ISMBB)   field(ONVL, "ON")
+}
+record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):DISP")
+{
+    field(DISP, "1")
+    field(VAL, "0")
+$(ISB)   field(ZNAM, "OFF")
+$(ISB)   field(ONAM, "ON")
+#$(ISMBB)   field(ZRVL, "OFF")
+#$(ISMBB)   field(ONVL, "ON")
+}
+record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):RODISP")
+{
+    field(ASG, "READONLY")
+    field(DISP, "1")
+    field(VAL, "0")
+$(ISB)   field(ZNAM, "OFF")
+$(ISB)   field(ONAM, "ON")
+#$(ISMBB)   field(ZRVL, "OFF")
+#$(ISMBB)   field(ONVL, "ON")
+}
+record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):HIDDEN")
+{
+    field(ASG, "HIDDEN")
+    field(DISP, "1")
+    field(VAL, "0")
+$(ISB)   field(ZNAM, "OFF")
+$(ISB)   field(ONAM, "ON")
+#$(ISMBB)   field(ZRVL, "OFF")
+#$(ISMBB)   field(ONVL, "ON")
+}
+
+
+record($(RECORD_TYPE), "$(P)TESTRECORD:$(RECORD_NAME):RO:FLNK")
+{
+    field(FLNK, "$(P)CATEST:$(RECORD_NAME):RO")
+}
+record($(RECORD_TYPE), "$(P)TESTRECORD:$(RECORD_NAME):DISP:FLNK")
+{
+    field(FLNK, "$(P)CATEST:$(RECORD_NAME):DISP")
+}
+record($(RECORD_TYPE), "$(P)TESTRECORD:$(RECORD_NAME):RODISP:FLNK")
+{
+    field(FLNK, "$(P)CATEST:$(RECORD_NAME):RODISP")
+}
