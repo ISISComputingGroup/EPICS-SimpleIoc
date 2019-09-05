@@ -3,29 +3,38 @@ record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):RO")
 {
     field(ASG, "READONLY")
     field(VAL, "0")
+    field(SCAN, "Passive")
 $(ISB)   field(ZNAM, "OFF")
 $(ISB)   field(ONAM, "ON")
-#$(ISMBB)   field(ZRVL, "OFF")
-#$(ISMBB)   field(ONVL, "ON")
+$(ISMBB)   field(ZRVL, "0")
+$(ISMBB)   field(ONVL, "1")
+$(ISMBB)   field(ZRST, "OFF")
+$(ISMBB)   field(ONST, "ON")
 }
 record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):DISP")
 {
     field(DISP, "1")
     field(VAL, "0")
+    field(SCAN, "Passive")
 $(ISB)   field(ZNAM, "OFF")
 $(ISB)   field(ONAM, "ON")
-#$(ISMBB)   field(ZRVL, "OFF")
-#$(ISMBB)   field(ONVL, "ON")
+$(ISMBB)   field(ZRVL, "0")
+$(ISMBB)   field(ONVL, "1")
+$(ISMBB)   field(ZRST, "OFF")
+$(ISMBB)   field(ONST, "ON")
 }
 record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):RODISP")
 {
     field(ASG, "READONLY")
     field(DISP, "1")
     field(VAL, "0")
+    field(SCAN, "Passive")
 $(ISB)   field(ZNAM, "OFF")
 $(ISB)   field(ONAM, "ON")
-#$(ISMBB)   field(ZRVL, "OFF")
-#$(ISMBB)   field(ONVL, "ON")
+$(ISMBB)   field(ZRVL, "0")
+$(ISMBB)   field(ONVL, "1")
+$(ISMBB)   field(ZRST, "OFF")
+$(ISMBB)   field(ONST, "ON")
 }
 record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):HIDDEN")
 {
@@ -34,20 +43,22 @@ record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):HIDDEN")
     field(VAL, "0")
 $(ISB)   field(ZNAM, "OFF")
 $(ISB)   field(ONAM, "ON")
-#$(ISMBB)   field(ZRVL, "OFF")
-#$(ISMBB)   field(ONVL, "ON")
+$(ISMBB)   field(ZRVL, "0")
+$(ISMBB)   field(ONVL, "1")
+$(ISMBB)   field(ZRST, "OFF")
+$(ISMBB)   field(ONST, "ON")
 }
 
 
-record($(RECORD_TYPE), "$(P)TESTRECORD:$(RECORD_NAME):RO:FLNK")
+record(ao, "$(P)CATEST:$(RECORD_NAME):RO:OUT")
 {
-    field(FLNK, "$(P)CATEST:$(RECORD_NAME):RO")
+    field(OUT, "$(P)CATEST:$(RECORD_NAME):RO")
 }
-record($(RECORD_TYPE), "$(P)TESTRECORD:$(RECORD_NAME):DISP:FLNK")
+record(ao, "$(P)CATEST:$(RECORD_NAME):DISP:OUT")
 {
-    field(FLNK, "$(P)CATEST:$(RECORD_NAME):DISP")
+    field(OUT, "$(P)CATEST:$(RECORD_NAME):DISP")
 }
-record($(RECORD_TYPE), "$(P)TESTRECORD:$(RECORD_NAME):RODISP:FLNK")
+record(ao, "$(P)CATEST:$(RECORD_NAME):RODISP:OUT")
 {
-    field(FLNK, "$(P)CATEST:$(RECORD_NAME):RODISP")
+    field(OUT, "$(P)CATEST:$(RECORD_NAME):RODISP")
 }
