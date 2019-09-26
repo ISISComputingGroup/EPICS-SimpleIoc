@@ -26,5 +26,3 @@ cd ${TOP}/iocBoot/${IOC}
 iocInit
 
 < $(IOCSTARTUP)/postiocinit.cmd
-
-dbl
