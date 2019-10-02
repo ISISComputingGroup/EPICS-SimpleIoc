@@ -18,6 +18,7 @@ simple_registerRecordDeviceDriver pdbbase
 < $(IOCSTARTUP)/dbload.cmd
 
 dbLoadRecords("db/simple.db","P=$(MYPVPREFIX)SIMPLE:")
+dbLoadRecords("db/channel_access_test.db","P=$(MYPVPREFIX)SIMPLE:")
 
 < $(IOCSTARTUP)/preiocinit.cmd
 
@@ -25,4 +26,3 @@ cd ${TOP}/iocBoot/${IOC}
 iocInit
 
 < $(IOCSTARTUP)/postiocinit.cmd
-

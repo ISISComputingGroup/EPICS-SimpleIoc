@@ -1,0 +1,86 @@
+
+record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):RO")
+{
+    field(ASG, "READONLY")
+    field(VAL, "0")
+    field(SCAN, "Passive")
+$(ISB)   field(ZNAM, "OFF")
+$(ISB)   field(ONAM, "ON")
+$(ISMBB)   field(ZRVL, "0")
+$(ISMBB)   field(ONVL, "1")
+$(ISMBB)   field(ZRST, "OFF")
+$(ISMBB)   field(ONST, "ON")
+}
+record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):DISP")
+{
+    field(DISP, "1")
+    field(VAL, "0")
+    field(SCAN, "Passive")
+$(ISB)   field(ZNAM, "OFF")
+$(ISB)   field(ONAM, "ON")
+$(ISMBB)   field(ZRVL, "0")
+$(ISMBB)   field(ONVL, "1")
+$(ISMBB)   field(ZRST, "OFF")
+$(ISMBB)   field(ONST, "ON")
+}
+record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):RODISP")
+{
+    field(ASG, "READONLY")
+    field(DISP, "1")
+    field(VAL, "0")
+    field(SCAN, "Passive")
+$(ISB)   field(ZNAM, "OFF")
+$(ISB)   field(ONAM, "ON")
+$(ISMBB)   field(ZRVL, "0")
+$(ISMBB)   field(ONVL, "1")
+$(ISMBB)   field(ZRST, "OFF")
+$(ISMBB)   field(ONST, "ON")
+}
+record($(RECORD_TYPE), "$(P)CATEST:$(RECORD_NAME):HIDDEN")
+{
+    field(ASG, "HIDDEN")
+    field(DISP, "1")
+    field(VAL, "0")
+$(ISB)   field(ZNAM, "OFF")
+$(ISB)   field(ONAM, "ON")
+$(ISMBB)   field(ZRVL, "0")
+$(ISMBB)   field(ONVL, "1")
+$(ISMBB)   field(ZRST, "OFF")
+$(ISMBB)   field(ONST, "ON")
+}
+
+
+record(ao, "$(P)CATEST:$(RECORD_NAME):RO:OUT")
+{
+    field(OUT, "$(P)CATEST:$(RECORD_NAME):RO")
+}
+record(ao, "$(P)CATEST:$(RECORD_NAME):DISP:OUT")
+{
+    field(OUT, "$(P)CATEST:$(RECORD_NAME):DISP")
+}
+record(ao, "$(P)CATEST:$(RECORD_NAME):RODISP:OUT")
+{
+    field(OUT, "$(P)CATEST:$(RECORD_NAME):RODISP")
+}
+
+record(calcout, "$(P)CATEST:$(RECORD_NAME):RO:PROC")
+{
+    field(INPA, "$(P)CATEST:$(RECORD_NAME):RO:OUT.PROC")
+    field(CALC, "A=1?0:1")
+    field(VAL, "0")
+    field(CALC, "1")
+}
+record(calcout, "$(P)CATEST:$(RECORD_NAME):DISP:PROC")
+{
+    field(INPA, "$(P)CATEST:$(RECORD_NAME):DISP:OUT.PROC")
+    field(CALC, "A=1?0:1")
+    field(VAL, "0")
+    field(CALC, "1")
+}
+record(calcout, "$(P)CATEST:$(RECORD_NAME):RODISP:PROC")
+{
+    field(INPA, "$(P)CATEST:$(RECORD_NAME):RODISP:OUT.PROC")
+    field(CALC, "A=1?0:1")
+    field(VAL, "0")
+    field(CALC, "1")
+}
