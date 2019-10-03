@@ -68,19 +68,16 @@ record(calcout, "$(P)CATEST:$(RECORD_NAME):RO:PROC")
     field(INPA, "$(P)CATEST:$(RECORD_NAME):RO:OUT.PROC")
     field(CALC, "A=1?0:1")
     field(VAL, "0")
-    field(CALC, "1")
 }
 record(calcout, "$(P)CATEST:$(RECORD_NAME):DISP:PROC")
 {
     field(INPA, "$(P)CATEST:$(RECORD_NAME):DISP:OUT.PROC")
     field(CALC, "A=1?0:1")
     field(VAL, "0")
-    field(CALC, "1")
 }
 record(calcout, "$(P)CATEST:$(RECORD_NAME):RODISP:PROC")
 {
     field(INPA, "$(P)CATEST:$(RECORD_NAME):RODISP:OUT.PROC")
     field(CALC, "A=1?0:1")
     field(VAL, "0")
-    field(CALC, "1")
 }
