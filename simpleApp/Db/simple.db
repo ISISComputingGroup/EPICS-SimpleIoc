@@ -34,7 +34,21 @@ record(ai, "$(P)VALUE1")
     field(SIML, "$(P)SIM")
     field(SIOL, "$(P)SIM:VALUE1")
     field(SDIS, "$(P)DISABLE")
-	field(EGU, "")
+    field(EGU, "")
+    info(LOG_column_header1, "Value 1")
+}
+
+record(bi, "$(P)LOGGING")
+{
+    field(DESC, "Set logging")
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+    field(PINI, "YES")
+    field(VAL, "0")
+    info(archive, "VAL 1")
+    info(LOG_trigger, "")
+    info(LOG_header1, "Header line 1")
+    info(LOG_period_seconds, "0.5")
 }
 
 # Used in system tests
