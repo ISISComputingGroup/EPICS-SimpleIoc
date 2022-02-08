@@ -1,3 +1,4 @@
+#include <windows.h>
 #include <stdlib.h>
 #include <registryFunction.h>
 #include <aSubRecord.h>
@@ -20,7 +21,14 @@ static long forcecrash(aSubRecord *prec)
 
     if ( *(long*)prec->a == 1){
         // Purposefully cause a segfault by writing to invalid memory address 0
-        *ptr = 0;
+        //*ptr = 0;
+        // above can cause a debugger to appear, so exit process for same effect
+#ifdef _WIN32
+        ExitProcess(1);
+        //TerminateProcess(GetCurrentProcess(), 1);
+#else
+        _exit(1);
+#endif /* _WIN32 */
     }
 
     return 0;
