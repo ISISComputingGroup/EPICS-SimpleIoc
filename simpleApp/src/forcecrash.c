@@ -1,5 +1,7 @@
 #ifdef _WIN32
 #include <windows.h>
+#else
+#include <unistd.h>
 #endif /* _WIN32 */
 #include <stdlib.h>
 #include <registryFunction.h>
@@ -17,7 +19,7 @@ static long forcecrash(aSubRecord *prec)
     if (prec->fta != menuFtypeLONG)
     {
         errlogSevPrintf(errlogMajor, "%s incorrect argument type A", prec->name);
-        printf(prec->fta);
+        printf("%d", prec->fta);
         return 1;
     }
 
