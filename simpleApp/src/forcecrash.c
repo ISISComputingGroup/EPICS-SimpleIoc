@@ -28,8 +28,8 @@ static long forcecrash(aSubRecord *prec)
         //*ptr = 0;
         // above can cause a debugger to appear, so exit process for same effect
 #ifdef _WIN32
-        ExitProcess(1);
-        //TerminateProcess(GetCurrentProcess(), 1);
+        //ExitProcess(1); // This now seems to hang ioc and not exit
+        TerminateProcess(GetCurrentProcess(), 1);
 #else
         _exit(1);
 #endif /* _WIN32 */
