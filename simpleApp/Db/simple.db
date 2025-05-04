@@ -86,7 +86,7 @@ record(ao, "$(P)VALUE2:SP")
     field(SIML, "$(P)SIM")
     field(SIOL, "$(P)SIM:VALUE2")
     field(SDIS, "$(P)DISABLE")
-    field(FLNK, "$(P)VALUE1")
+    field(FLNK, "$(P)VALUE2")
 }
 
 # Used in system tests
@@ -182,38 +182,38 @@ record(bi, "$(P)BI")
     field(ONAM, "YES")	
 }
 
+# This does not set SIML field as it has no SIOL 
 record(ai, "$(P)VALUE:P3")
 {
     info(INTEREST, "HIGH")
 	field(DESC, "A value with PREC 3")
 	field(VAL, "1")
 	field(PREC, "3")
-    field(SIML, "$(P)SIM")
     field(SDIS, "$(P)DISABLE")
 	field(EGU, "")
 }
 alias("$(P)VALUE:P3", "$(P)VALUE:P3:SP")
 alias("$(P)VALUE:P3", "$(P)VALUE:P3:SP:RBV")
 
+# This does not set SIML field as it has no SIOL 
 record(ai, "$(P)VALUE:P5")
 {
     info(INTEREST, "HIGH")
 	field(DESC, "A value with PREC 5")
 	field(VAL, "1")
 	field(PREC, "5")
-    field(SIML, "$(P)SIM")
     field(SDIS, "$(P)DISABLE")
 	field(EGU, "")
 }
 alias("$(P)VALUE:P5", "$(P)VALUE:P5:SP")
 alias("$(P)VALUE:P5", "$(P)VALUE:P5:SP:RBV")
 
+# This does not set SIML field as it has no SIOL 
 record(longin, "$(P)LONG")
 {
 	info(INTEREST, "HIGH")
 	field(DESC, "An integer")
 	field(VAL, "1")
-	field(SIML, "$(P)SIM")
     field(SDIS, "$(P)DISABLE")
 	field(EGU, "")
 }
