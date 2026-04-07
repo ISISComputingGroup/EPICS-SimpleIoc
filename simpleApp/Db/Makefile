@@ -11,6 +11,9 @@ include $(TOP)/configure/CONFIG
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
 DB += simple.db channel_access_test.db
+DB += simple_macrotest1.db
+DB += simple_macrotest2.db
+DB += simple_macrotest3.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

@@ -1,0 +1,5 @@
+record(stringout, $(P)MACROTEST2)
+{
+    field(DESC, "Macro default of 5 for a value")
+    field(VAL, "$(MACRO2)")
+}
