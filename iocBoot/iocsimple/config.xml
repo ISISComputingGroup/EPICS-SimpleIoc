@@ -3,7 +3,7 @@
 <config_part>
 <ioc_desc>ISIS IBEX Basic IOC providing some PVs for some simple data types</ioc_desc>
 <macros>
-<macro name="MACRO1" pattern="^[0-9]+$" description="A macro without a default" hasDefault="No"/>
+<macro name="MACRO1" pattern="^[0-9]+$" description="A macro without a default" hasDefault="NO"/>
 <macro name="MACRO2" pattern="^[0-9]+$" description="A macro with a default of 5" hasDefault="YES" defaultValue="5"/>
 <macro name="MACRO3" pattern="^[0-9]+$" description="A macro with a default of ''" hasDefault="YES" defaultValue=""/>
 </macros>
